@@ -1,0 +1,202 @@
+.accounts-section {
+  padding: 36px 0 16px;
+}
+
+.accounts-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.account-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  width: 280px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 260ms ease, box-shadow 260ms ease;
+}
+
+.account-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+}
+
+.account-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+.account-card:hover .account-pic {
+  transform: scale(1.05);
+}
+
+.description {
+  margin: 0 0 12px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.account-links a {
+  color: #2b2b2b;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.account-links a:hover {
+  color: red;
+}
+
+.anim-fade {
+  animation: fadeInUp 2000ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+.anim-slide {
+  animation: slideInLeft 2000ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+.anim-zoom {
+  animation: zoomInRotate 2000ms cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-22px) rotate(-1deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes zoomInRotate {
+  from {
+    opacity: 0;
+    transform: scale(0.92) rotate(-6deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media (max-width: 820px) {
+  .account-card {
+    width: 100%;
+    max-width: 420px;
+  }
+  .accounts-grid {
+    gap: 14px;
+  }
+}
+
+body.dark .account-card {
+  background: #161616;
+  color: #eaeaea;
+}
+body.dark .account-links a {
+  color: #eaeaea;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  background-color: wheat;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+.navbar {
+  display: flex;
+}
+
+.isi {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigate {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .navigate {
+    display: none;
+    position: absolute;
+    right: 24px;
+    top: 64px;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navigate > li {
+    padding: 8px 6px;
+    font-size: 18px;
+  }
+}
+
+.navigate li {
+  list-style-type: none;
+  padding: 12px 16px;
+  font-size: 18px;
+}
+
+.navigate > li > a {
+  text-decoration: none;
+  color: #222;
+}
+
+.role {
+  font-family: Verdana;
+  color: black;
+}

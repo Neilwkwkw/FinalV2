@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="modern.css" />
+    <title>Modern Art Gallery</title>
+  </head>
+
+  <body>
+    <div id="intro" class="intro-animate" aria-hidden="true">
+      <div class="intro-inner">
+        <img src="download.png" alt="" />
+        <h1>Guarias</h1>
+        <p class="intro-desc">
+          A small gallery of modern paintings and photography.
+        </p>
+      </div>
+    </div>
+    <header>
+      <div class="isi">
+        <div class="brand">
+          <img src="download.png" alt="Guarias" />
+          <span class="brand-text">Guarias</span>
+        </div>
+
+        <div class="navbar">
+          <nav class="navigation">
+            <ul class="navigate">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="purchase.html">Purchase</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="container">
+        <div class="card">
+          <img src="n1.jpg" alt="n1" />
+          <div class="info">
+            <div class="title">The way of life</div>
+            <div class="price">11,000 PHP</div>
+            <a class="buy-btn" href="purchase.html#the-way-of-life">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <img src="n2.png" alt="n2" />
+          <div class="info">
+            <div class="title">The Lonely Guitarist</div>
+            <div class="price">15,000 PHP</div>
+            <a class="buy-btn" href="purchase.html#the-lonely-guitarist"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <img src="n3.png" alt="n3" />
+          <div class="info">
+            <div class="title">Unconscious Man</div>
+            <div class="price">13,000 PHP</div>
+            <a class="buy-btn" href="purchase.html#unconscious-man">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="card">
+          <img src="n4.png" alt="n4" />
+          <div class="info">
+            <div class="title">Cigarettes Addiction</div>
+            <div class="price">9,000 PHP</div>
+            <a class="buy-btn" href="purchase.html#cigarettes-addiction"
+              >Buy Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    (function () {
+      const intro = document.getElementById("intro");
+      if (!intro) return;
+      intro.addEventListener("animationend", () => intro.remove());
+    })();
+  </script>
+</html>

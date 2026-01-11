@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+  <title>Art Gallery</title>
+</head>
+<body>
+  <div id="index-intro" class="index-intro-animate" aria-hidden="true">
+    <div class="index-intro-inner">
+      <img src="download.png" alt="" />
+      <h1>Guarias</h1>
+      <p class="index-intro-desc">Discover modern paintings, exhibitions, and profiles.</p>
+    </div>
+  </div>
+
+  <header>
+      <div class="isi">
+        <div class="brand">
+          <img src="download.png" alt="Guarias" />
+          <span class="brand-text">Guarias</span>
+        </div>
+        
+        <div class="nav">
+          <a href="contact.html">Contact</a>
+        </div>
+    </header>
+
+  <ul class="container">
+    <li>
+      <a href="modern.html">
+      <img src="modern.jpg">
+      <div class="content">
+        <span>
+          <h2> Modern Art</h2>
+          <br/>
+            <p>
+              Modern artwork is defined by its deliberate and often confrontational rejection of the academic, historical, and mythological subject matter that dominated art for centuries. The movement was a response to the rapid industrialization, social change, and new intellectual ideas of the era.
+
+              <br>
+              <br>
+              
+              Check Now!
+            </p>
+        </span>
+      </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="home.html">
+      <img src="exhibition.jpg">
+      <div class="content">
+        <span>
+          <h2>Exhibition</h2>
+          <br/>
+          <p>
+            I draw architecture to capture the atmosphere and emotion embedded in built spaces. This series translates the feeling of a street, the weight of an archway, or the isolation of a facade into intimate compositions, exploring our deep, often hidden, relationship with the structures we inhabit.
+          </p>
+        </span>
+      </div>
+      </a>
+    </li>
+
+    <li>
+      <a href="profile.html">
+      <img src="profile.jpg">
+      <div class="content">
+        <span>
+          <h2>Profile</h2>
+          <br/>
+          <p>
+            I'm an artist dedicated to capturing the soul of the structure. My work explores the geometry, history, and atmosphere of architecture, finding beauty in the lines that shape our world.
+            
+         </p>
+        </span>
+     </div>
+      </a>
+    </li>
+
+    <li>
+      <img src="about.jpg">
+      <div class="content">
+       <span>
+         <h3>About</h3>
+         <p>
+            Welcome to the digital home of my architectural artwork. This website serves as my primary exhibition platform, showcasing current and archived series of drawings. For commissions, collaborations, or to inquire about original pieces, please use the contact form provided.
+         </p>
+       </span>
+      </div>
+    </li>
+  </ul>
+
+  <div class="quote">
+      <h3>Welcome to the Digital Art Gallery of GUARIAS a new revolutionary of Online Art Gallery</h3>
+  </div>
+
+  <footer class="footer">
+    © 2025 Art Gallery Theme. All Rights Reserved.
+  </footer>
+  <script>
+    (function(){
+      const intro = document.getElementById('index-intro');
+      if (!intro) return;
+      intro.addEventListener('animationend', () => intro.remove());
+    })();
+  </script>
+  <script>
+    (function(){
+      const images = [
+        'modern.jpg',
+        'exhibition.jpg',
+        'profile.jpg'
+      ];
+      let idx = 0;
+      const img = document.getElementById('intro-img');
+      if(!img) return;
+      img.style.transition = 'opacity 250ms ease-in-out';
+      img.style.opacity = '1';
+      setInterval(()=>{
+        img.style.opacity = '0';
+        setTimeout(()=>{
+          idx = (idx + 1) % images.length;
+          img.src = images[idx];
+          img.style.opacity = '1';
+        }, 260);
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
